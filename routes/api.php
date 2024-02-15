@@ -25,11 +25,11 @@ Route::group(['middleware' => 'auth:api'], function(){
     | User APIs
     | --------------------------------------------------------------------------
     */
-    Route::post('user-table',[UserController::class,'getUserTable'])->name('accounting.users.table');
+    Route::post('user-table',[UserController::class,'getUserTable'])->name('users.table');
     Route::get('user-list',[UserController::class,'getUserList']);
-    Route::post('user/{add}',[UserController::class,'addUpdateUser'])->name('accounting.users.add');  
-    Route::post('user/{update}',[UserController::class,'addUpdateUser'])->name('accounting.users.update');  
-    Route::post('user/delete',[UserController::class,'deleteUser'])->name('accounting.users.delete');  
-    Route::post('user/get',[UserController::class,'getUser'])->name('accounting.users.get');  
-    Route::post('user/get_details',[UserController::class,'getUserDetails'])->name('accounting.users.get_details'); 
+    Route::post('user/{add}',[UserController::class,'addUpdateUser'])->name('users.add');  
+    Route::post('user/{update}',[UserController::class,'addUpdateUser'])->name('users.update');  
+    Route::post('user/delete',[UserController::class,'deleteUser'])->name('users.delete');  
+    Route::post('user/get',[UserController::class,'getUser'])->name('users.get');  
+    Route::post('user/get_details',[UserController::class,'getUserDetails'])->name('users.get_details'); 
 });
